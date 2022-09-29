@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LogInComponent } from './authentication/log-in/log-in.component';
+import { PlansComponent } from './authentication/plans/plans.component';
+import { RegisterFormComponent } from './authentication/register-form/register-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { ForecastComponent } from './pages/forecast/forecast.component';
@@ -10,7 +13,7 @@ import { PlotsComponent } from './pages/plots/plots.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard/calendar',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -42,6 +45,18 @@ const routes: Routes = [
         component: NotFoundComponent,
       }
     ]
+  },
+  {
+    path: 'login',
+    component: LogInComponent
+  },
+  {
+    path: 'register',
+    component: RegisterFormComponent
+  },
+  {
+    path: 'plans',
+    component: PlansComponent
   }
 ];
 
