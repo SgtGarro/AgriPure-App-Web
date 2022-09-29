@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
 
+## Instalacion de paquetes :D
+
+Instalar el pinche `npm install` >:v
+Tambien esta vaina de `ng add @angular/material`
+Y esta cosa de Ludwin `npm install @ngneat/until-destroy`. Maldito Ludwin, siempre poniendo cosas que ni siquiera se para que sirve xd
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
