@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { ForecastComponent } from './pages/forecast/forecast.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
@@ -9,29 +10,39 @@ import { PlotsComponent } from './pages/plots/plots.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'plants',
+    redirectTo: 'dashboard/calendar',
     pathMatch: 'full'
   },
   {
-    path: 'plants',
-    component: PlantsComponent,
+    path: 'dashboard',
+    component: DashboardComponent
   },
   {
-    path: 'calendar',
-    component: CalendarComponent,
-  },
-  {
-    path: 'plots',
-    component: PlotsComponent,
-  },
-  {
-    path: 'forecast',
-    component: ForecastComponent,
-  },
-  {
-    path: '**',
-    component: NotFoundComponent,
-  },
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      {
+        path: 'plants',
+        component: PlantsComponent
+      },
+      {
+        path: 'calendar',
+        component: CalendarComponent,
+      },
+      {
+        path: 'plots',
+        component: PlotsComponent,
+      },
+      {
+        path: 'forecast',
+        component: ForecastComponent,
+      },
+      {
+        path: '**',
+        component: NotFoundComponent,
+      }
+    ]
+  }
 ];
 
 @NgModule({

@@ -15,6 +15,7 @@ import { ForecastComponent } from './pages/forecast/forecast.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { PlantsComponent } from './pages/plants/plants.component';
 import { PlotsComponent } from './pages/plots/plots.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PlotsComponent } from './pages/plots/plots.component';
     ForecastComponent,
     NotFoundComponent,
     PlantsComponent,
-    PlotsComponent
+    PlotsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
